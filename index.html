@@ -10,10 +10,10 @@
 
   <body class="bg-gray-50">
     <div class="flex min-h-screen flex-col">
-      <div class="flex flex-1 overflow-hidden">
+      <div class="flex flex-1 overflow-hidden flex-col lg:flex-row">
         <!-- LEFT HAND SIDEBAR -->
         <aside
-          class="w-72 gradient-blue flex flex-col py-8 px-6 border-r border-blue-100/50"
+          class="hidden lg:flex w-72 gradient-blue flex-col py-8 px-6 border-r border-blue-100/50"
         >
           <!-- PROFILE -->
           <div class="mb-10">
@@ -85,23 +85,49 @@
         </aside>
 
         <!-- MAIN CONTENT -->
-        <main class="flex-1 bg-gray-50 px-10 py-8 overflow-y-auto">
+        <main
+          class="flex-1 bg-gray-50 px-4 sm:px-6 lg:px-10 py-6 lg:py-8 overflow-y-auto"
+        >
           <!-- HEADER -->
-          <div class="flex items-center justify-between mb-8">
-            <h1
-              class="text-3xl font-bold text-gray-900 tracking-tight"
-              style="letter-spacing: -0.02em"
-            >
-              Dashboard
-            </h1>
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 lg:mb-8 gap-4"
+          >
             <div class="flex items-center gap-3">
               <button
-                class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm"
+                class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                aria-label="Menu"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+              <h1
+                class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight"
+                style="letter-spacing: -0.02em"
+              >
+                Dashboard
+              </h1>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3"
+            >
+              <button
+                class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-4 sm:px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm"
               >
                 Adicionar despesa
               </button>
               <button
-                class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm"
+                class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold px-4 sm:px-6 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm"
               >
                 Registrar entrada
               </button>
@@ -109,7 +135,9 @@
           </div>
 
           <!-- FINANCIAL CARDS -->
-          <div class="mb-10 grid grid-cols-2 gap-5">
+          <div
+            class="mb-8 lg:mb-10 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5"
+          >
             <div
               class="bg-white rounded-2xl p-6 card-shadow-lg border border-gray-100/50"
             >
@@ -120,14 +148,14 @@
                   Saldo atual
                 </p>
                 <p
-                  class="text-3xl font-bold text-gray-900 tracking-tight"
+                  class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight"
                   style="letter-spacing: -0.03em"
                 >
                   R$ 12.440,42
                 </p>
               </div>
 
-              <div class="grid grid-cols-2 gap-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div
                   class="bg-gradient-to-br from-emerald-50 to-emerald-100/50 rounded-xl p-4 card-shadow border border-emerald-100/50 relative"
                 >
@@ -153,7 +181,9 @@
                   <p class="text-xs text-gray-600 font-medium mb-1.5">
                     Entradas
                   </p>
-                  <p class="text-lg font-bold text-emerald-600 tracking-tight">
+                  <p
+                    class="text-base sm:text-lg font-bold text-emerald-600 tracking-tight"
+                  >
                     R$ 18.000,00
                   </p>
                 </div>
@@ -181,7 +211,9 @@
                     </div>
                   </div>
                   <p class="text-xs text-gray-600 font-medium mb-1.5">Saídas</p>
-                  <p class="text-lg font-bold text-red-600 tracking-tight">
+                  <p
+                    class="text-base sm:text-lg font-bold text-red-600 tracking-tight"
+                  >
                     -R$ 5.559,58
                   </p>
                 </div>
@@ -198,14 +230,14 @@
                   Progresso da meta
                 </p>
                 <p
-                  class="text-3xl font-bold text-gray-900 tracking-tight"
+                  class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight"
                   style="letter-spacing: -0.03em"
                 >
                   R$ 80.000,00
                 </p>
               </div>
 
-              <div class="grid grid-cols-2 gap-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div
                   class="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-4 card-shadow border border-blue-100/50 relative"
                 >
@@ -231,7 +263,9 @@
                   <p class="text-xs text-gray-600 font-medium mb-1.5">
                     Acumulado
                   </p>
-                  <p class="text-lg font-bold text-blue-600 tracking-tight">
+                  <p
+                    class="text-base sm:text-lg font-bold text-blue-600 tracking-tight"
+                  >
                     R$ 45.000,00
                   </p>
                 </div>
@@ -261,7 +295,9 @@
                   <p class="text-xs text-gray-600 font-medium mb-1.5">
                     Ainda falta
                   </p>
-                  <p class="text-lg font-bold text-orange-600 tracking-tight">
+                  <p
+                    class="text-base sm:text-lg font-bold text-orange-600 tracking-tight"
+                  >
                     R$ 35.000,00
                   </p>
                 </div>
@@ -279,15 +315,15 @@
             </h2>
             <div class="space-y-2.5">
               <div
-                class="flex items-center justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover gap-3 sm:gap-0"
               >
                 <div class="flex items-center space-x-4">
                   <div
-                    class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center"
+                    class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0"
                   >
                     <span class="text-xl">⛽</span>
                   </div>
-                  <div>
+                  <div class="min-w-0 flex-1">
                     <p class="font-semibold text-gray-900 text-sm">
                       Combustível
                     </p>
@@ -296,19 +332,23 @@
                     </p>
                   </div>
                 </div>
-                <p class="font-bold text-red-600 text-base">-R$ 255,70</p>
+                <p
+                  class="font-bold text-red-600 text-base sm:text-left text-right"
+                >
+                  -R$ 255,70
+                </p>
               </div>
 
               <div
-                class="flex items-center justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover gap-3 sm:gap-0"
               >
                 <div class="flex items-center space-x-4">
                   <div
-                    class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center"
+                    class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0"
                   >
                     <span class="text-xl">🍽️</span>
                   </div>
-                  <div>
+                  <div class="min-w-0 flex-1">
                     <p class="font-semibold text-gray-900 text-sm">
                       Almoço no shopping
                     </p>
@@ -317,26 +357,34 @@
                     </p>
                   </div>
                 </div>
-                <p class="font-bold text-red-600 text-base">-R$ 68,23</p>
+                <p
+                  class="font-bold text-red-600 text-base sm:text-left text-right"
+                >
+                  -R$ 68,23
+                </p>
               </div>
 
               <div
-                class="flex items-center justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover gap-3 sm:gap-0"
               >
                 <div class="flex items-center space-x-4">
                   <div
-                    class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center"
+                    class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0"
                   >
                     <span class="text-xl">📺</span>
                   </div>
-                  <div>
+                  <div class="min-w-0 flex-1">
                     <p class="font-semibold text-gray-900 text-sm">Netflix</p>
                     <p class="text-xs text-gray-500 font-medium">
                       17:12 - Streaming
                     </p>
                   </div>
                 </div>
-                <p class="font-bold text-red-600 text-base">-R$ 49,90</p>
+                <p
+                  class="font-bold text-red-600 text-base sm:text-left text-right"
+                >
+                  -R$ 49,90
+                </p>
               </div>
             </div>
           </div>
@@ -350,41 +398,49 @@
             </h2>
             <div class="space-y-2.5">
               <div
-                class="flex items-center justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover gap-3 sm:gap-0"
               >
                 <div class="flex items-center space-x-4">
                   <div
-                    class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center"
+                    class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center flex-shrink-0"
                   >
                     <span class="text-xl">🏠</span>
                   </div>
-                  <div>
+                  <div class="min-w-0 flex-1">
                     <p class="font-semibold text-gray-900 text-sm">Aluguel</p>
                     <p class="text-xs text-gray-500 font-medium">
                       11:32 - Moradia
                     </p>
                   </div>
                 </div>
-                <p class="font-bold text-red-600 text-base">-R$ 5185,75</p>
+                <p
+                  class="font-bold text-red-600 text-base sm:text-left text-right"
+                >
+                  -R$ 5185,75
+                </p>
               </div>
 
               <div
-                class="flex items-center justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover"
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-white rounded-xl card-shadow border border-gray-100/50 card-hover gap-3 sm:gap-0"
               >
                 <div class="flex items-center space-x-4">
                   <div
-                    class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center"
+                    class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0"
                   >
                     <span class="text-xl">💰</span>
                   </div>
-                  <div>
+                  <div class="min-w-0 flex-1">
                     <p class="font-semibold text-gray-900 text-sm">Salário</p>
                     <p class="text-xs text-gray-500 font-medium">
                       09:00 - Recebimento
                     </p>
                   </div>
                 </div>
-                <p class="font-bold text-emerald-600 text-base">R$ 18.000,00</p>
+                <p
+                  class="font-bold text-emerald-600 text-base sm:text-left text-right"
+                >
+                  R$ 18.000,00
+                </p>
               </div>
             </div>
           </div>
@@ -392,7 +448,7 @@
 
         <!-- RIGHT HAND SIDEBAR -->
         <aside
-          class="w-96 bg-white border-l border-gray-200/50 px-8 py-8 overflow-y-auto"
+          class="hidden xl:flex w-96 bg-white border-l border-gray-200/50 px-6 xl:px-8 py-6 xl:py-8 overflow-y-auto flex-col"
         >
           <div class="mb-10">
             <h2
